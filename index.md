@@ -50,7 +50,7 @@ We can either create a new repository (`git init`), or get an existing repositor
 
 This will copy a remote repository (usually from the Internet) to your local filesystem.
 
-```
+```bash
 git clone https://github.com/PropicSignifi/GitTutorial
 ```
 
@@ -62,7 +62,7 @@ git clone https://github.com/PropicSignifi/GitTutorial
 
 This will convert your current directory into a git repository
 
-```
+```bash
 mkdir NewFolder
 cd NewFolder
 git init
@@ -81,7 +81,7 @@ and your remote branch.
 This is an example of a clean status. We will see more complicated status as
 the tutorial proceeds.
 
-```
+```bash
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -90,6 +90,76 @@ nothing to commit, working tree clean
 ```
 
 Advice: always check your status before taking further actions.
+
+---
+
+# Branch ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git branch
+
+`git branch` shows the status of the branches.
+
+```bash
+$ git branch
+* master
+```
+
+This shows me that I have only one branch named "master". By default, "master"
+is the main branch of a git repository.
+
+---
+
+# Branch ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git branch
+
+We can create a new branch by type a new branch name after `git branch`:
+
+```bash
+$ git branch myNewBranch
+```
+
+Now check your branches status again.
+
+```bash
+$ git branch
+* master
+  myNewBranch
+```
+
+We have two branches now, but our current working branch is still "master".
+
+---
+
+# Branch ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git checkout \<branch\>
+
+We can switch to a different branch using the command `git checkout`
+
+```bash
+$ git checkout myNewBranch
+$ git branch
+  master
+* myNewBranch
+```
+
+![intermediate](https://img.shields.io/badge/-Intermediate-blue)
+`git checkout` has many, many usages. We can use it to switch to a branch,
+a commit, or a tag. We can also checkout a file or a directory. Even
+more, we can combine the both. For example, checkout a file from a
+specific branch. We will see some of these examples later.
+
+---
+
+# Making changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+Let's start from creating a new file, name it "hello.txt", and add some
+content to the file:
+
+```bash
+echo "Hello world" >> hello.txt
+```
 
 ---
 
