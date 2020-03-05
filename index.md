@@ -50,7 +50,7 @@ We can either create a new repository (`git init`), or get an existing repositor
 
 This will copy a remote repository (usually from the Internet) to your local filesystem.
 
-```bash
+```git
 git clone https://github.com/PropicSignifi/GitTutorial
 ```
 
@@ -62,7 +62,7 @@ git clone https://github.com/PropicSignifi/GitTutorial
 
 This will convert your current directory into a git repository
 
-```bash
+```git
 mkdir NewFolder
 cd NewFolder
 git init
@@ -81,7 +81,7 @@ and your remote branch.
 This is an example of a clean status. We will see more complicated status as
 the tutorial proceeds.
 
-```bash
+```git
 $ git status
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -99,7 +99,7 @@ Advice: always check your status before taking further actions.
 
 `git branch` shows the status of the branches.
 
-```bash
+```git
 $ git branch
 * master
 ```
@@ -115,13 +115,13 @@ is the main branch of a git repository.
 
 We can create a new branch by type a new branch name after `git branch`:
 
-```bash
+```git
 $ git branch myNewBranch
 ```
 
 Now check your branches status again.
 
-```bash
+```git
 $ git branch
 * master
   myNewBranch
@@ -137,7 +137,7 @@ We have two branches now, but our current working branch is still "master".
 
 We can switch to a different branch using the command `git checkout`
 
-```bash
+```git
 $ git checkout myNewBranch
 $ git branch
   master
@@ -157,8 +157,38 @@ specific branch. We will see some of these examples later.
 Let's start from creating a new file, name it "hello.txt", and add some
 content to the file:
 
-```bash
+```git
 echo "Hello world" >> hello.txt
+```
+
+Now if we see our `git status`, we can see "hello.txt" is recognized as
+an untracked file.
+
+```git
+$ git status
+On branch myNewBranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+---
+
+# Making changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git add \<path\>
+
+`git add` will convert our untracked file to a staged status.
+
+```git
+$ git add hello.txt
+$ git status
+On branch myNewBranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   hello.txt
 ```
 
 ---
