@@ -63,8 +63,8 @@ git clone https://github.com/PropicSignifi/GitTutorial
 This will convert your current directory into a git repository
 
 ```git
-mkdir NewFolder
-cd NewFolder
+mkdir MyProject
+cd MyProject
 git init
 ```
 
