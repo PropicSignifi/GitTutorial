@@ -24,11 +24,72 @@ People may get confused with git and github. Git is a command-line tool for vers
 
 ---
 
-# Getting a repository
+# Level of difficulty
+
+I will categorize each page with a level of difficulty.
+
+![basic](https://img.shields.io/badge/-Basic-brightgreen) Basic commands that you should be familiar with
+
+![intermediate](https://img.shields.io/badge/-Intermediate-blue) Learning these commands or knowledge will help you understand how git internally works
+
+![advanced](https://img.shields.io/badge/-Advanced-red) Advanced skills but still proved to be useful
+
+---
+
+# Getting a repository ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 A Repository is a location that you keep all the files related to your project.
 
 We can either create a new repository (`git init`), or get an existing repository from somewhere else (`git clone`).
+
+---
+
+# Getting a repository ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git clone
+
+This will copy a remote repository (usually from the Internet) to your local filesystem.
+
+```
+git clone https://github.com/PropicSignifi/GitTutorial
+```
+
+---
+
+# Getting a repository ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git init
+
+This will convert your current directory into a git repository
+
+```
+mkdir NewFolder
+cd NewFolder
+git init
+```
+
+---
+
+# Check your status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git status
+
+It shows the status of your current branch, the status of all the files in
+your repository, and the status of the differences between your local branch
+and your remote branch.
+
+This is an example of a clean status. We will see more complicated status as
+the tutorial proceeds.
+
+```
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
+Advice: always check your status before taking further actions.
 
 ---
 
