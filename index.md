@@ -333,6 +333,12 @@ So far, we've seen all four different status of a file. They are:
 
 ---
 
+# Discarding the changes ![basic](https://img.shields.io/badge/-Intermediate-blue)
+
+
+
+---
+
 # Pulling the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 ## git pull
@@ -341,12 +347,30 @@ Git is a distributed version control system, which means there are also changes
 made by other people from other places. We can get their update using the
 `git pull` command.
 
-Usually we only care about the main branch from our origin master branch.
+Usually we only care about the main branch (master) from our remote server.
 So the following one would be a frequently used command:
 
 ```git
 git pull origin master
 ```
+
+---
+
+# Pushing the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git push
+
+When you think your changes are good enough, you'd probably want to push your
+changes to the remote server. Usually, you wouldn't want to push the changes to
+the main branch (master) directly, so we should do the push for our current
+branch.
+
+```git
+git push origin myNewBranch
+```
+
+When the push is finished, your local branch "myNewBranch" will be copied to
+the remote repository.
 
 ---
 
