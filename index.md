@@ -70,7 +70,7 @@ git init
 
 ---
 
-# Check your status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+# Checking your status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 ## git status
 
@@ -214,7 +214,7 @@ nothing to commit, working tree clean
 
 ---
 
-# Check the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+# Checking the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 ## git log
 
@@ -229,7 +229,7 @@ Date:   Fri Mar 6 11:20:14 2020 +1100
 
 ---
 
-# Check the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+# Checking the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 ## git log
 
@@ -255,14 +255,14 @@ index 0000000..802992c
 
 ---
 
-# Check the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+# Checking the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
 ## git diff
 
 Using `git diff` can also check the changes. For example, `git diff master`
 will show us the difference from the master branch to our current branch.
 
-```git
+```diff
 $ git diff master
 diff --git a/hello.txt b/hello.txt
 new file mode 100644
@@ -271,6 +271,70 @@ index 0000000..802992c
 +++ b/hello.txt
 @@ -0,0 +1 @@
 +Hello world
+```
+
+---
+
+# Making changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+Let's continue to make changes on the file "hello.txt".
+
+```git
+echo "Hello again" >> hello.txt
+```
+
+Check the status. This time, the file "hello.txt" is in a modified status.
+
+```git
+$ git st
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+---
+
+# Checking the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+If there are files in a modified status, we can see the unstaged
+changes using `git diff`.
+
+```diff
+$ git diff
+diff --git a/hello.txt b/hello.txt
+index 802992c..06ae335 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+ Hello world
++Hello again
+```
+
+---
+
+# File status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+
+
+---
+
+# Pulling the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git pull
+
+Git is a distributed version control system, which means there are also changes
+made by other people from other places. We can get their update using the
+`git pull` command.
+
+Usually we only care about the main branch from our origin master branch.
+So the following one would be a frequently used command:
+
+```git
+git pull origin master
 ```
 
 ---
