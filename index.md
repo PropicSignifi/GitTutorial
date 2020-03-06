@@ -193,6 +193,88 @@ Changes to be committed:
 
 ---
 
+# Making changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git commit
+
+We are not ready to commit our change. A new commit requires a commit message.
+You may pass your commit message through the `-m` option.
+
+```git
+git commit -m "Add the line Hello world to the file hello.txt"
+```
+
+Now check our status again. Everything is clean.
+
+```git
+$ git status
+On branch myNewBranch
+nothing to commit, working tree clean
+```
+
+---
+
+# Check the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git log
+
+```git
+$ git log
+commit 4ce2556bc32186220054359bc275f8a6a90d4ca4 (HEAD -> myNewBranch)
+Author: Henry Li <henry@clicktocloud.com>
+Date:   Fri Mar 6 11:20:14 2020 +1100
+
+    Add the line Hello world to the file hello.txt
+```
+
+---
+
+# Check the history ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git log
+
+Many times, we can use `git log -p` instead, which will also show the
+detailed changes.
+
+```git
+$ git log -p
+commit 4ce2556bc32186220054359bc275f8a6a90d4ca4 (HEAD -> myNewBranch)
+Author: Henry Li <henry@clicktocloud.com>
+Date:   Fri Mar 6 11:20:14 2020 +1100
+
+    Add the line Hello world to the file hello.txt
+
+diff --git a/hello.txt b/hello.txt
+new file mode 100644
+index 0000000..802992c
+--- /dev/null
++++ b/hello.txt
+@@ -0,0 +1 @@
++Hello world
+```
+
+---
+
+# Check the changes ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+## git diff
+
+Using `git diff` can also check the changes. For example, `git diff master`
+will show us the difference from the master branch to our current branch.
+
+```git
+$ git diff master
+diff --git a/hello.txt b/hello.txt
+new file mode 100644
+index 0000000..802992c
+--- /dev/null
++++ b/hello.txt
+@@ -0,0 +1 @@
++Hello world
+```
+
+---
+
 # References
 
 [Pro Git, Scott Chacon and Ben Straub](https://git-scm.com/book/en/v2)
