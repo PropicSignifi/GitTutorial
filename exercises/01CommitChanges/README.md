@@ -1,4 +1,4 @@
-# Excercise: Commit your change
+# Exercise: Commit your change
 
 ## Instruction
 
