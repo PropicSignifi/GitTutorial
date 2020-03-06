@@ -318,7 +318,18 @@ index 802992c..06ae335 100644
 
 # File status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
 
+So far, we've seen all four different status of a file. They are:
 
+- Untracked (new)
+- Unmodified (clean)
+- Modified (unstaged)
+- Staged
+
+---
+
+# File status ![basic](https://img.shields.io/badge/-Basic-brightgreen)
+
+![status-cycle](images/lifecycle.png)
 
 ---
 
