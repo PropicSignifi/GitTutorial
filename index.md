@@ -335,7 +335,47 @@ So far, we've seen all four different status of a file. They are:
 
 # Discarding the changes ![basic](https://img.shields.io/badge/-Intermediate-blue)
 
+For different file status, commands for discarding the changes would be
+different.
 
+## git checkout \<path\>
+
+The most common situation is to discard modified/unstaged changes: we
+need to use `git checkout <path>`.
+
+```git
+git checkout hello.txt
+```
+
+---
+
+# Discarding the changes ![basic](https://img.shields.io/badge/-Intermediate-blue)
+
+## git reset \<path\>
+
+For files in staged status, we can use `git reset <path>` to convert it
+to unstaged status, then use `git checkout <path>` to discard the changes.
+
+```git
+git reset hello.txt
+git checkout hello.txt
+```
+
+---
+
+# Discarding the changes ![basic](https://img.shields.io/badge/-Intermediate-blue)
+
+## git clean -f \<file\>
+
+For those untracked files, we may simply use `rm <file>` to get rid of it,
+since git doesn't care about the file.
+
+Alternatively, we can use `git clean -f <file>`.
+
+```git
+touch randomNewFile
+git clean -f randomNewFile
+```
 
 ---
 
@@ -371,6 +411,24 @@ git push origin myNewBranch
 
 When the push is finished, your local branch "myNewBranch" will be copied to
 the remote repository.
+
+---
+
+# To be continued...
+
+More topics:
+
+- git stash
+
+- git merge
+
+- git rebase
+
+- git revert
+
+- git cherry-pick
+
+- git diff / git apply
 
 ---
 
