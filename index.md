@@ -320,10 +320,12 @@ index 802992c..06ae335 100644
 
 So far, we've seen all four different status of a file. They are:
 
+- Staged
+- Modified (unstaged)
 - Untracked (new)
 - Unmodified (clean)
-- Modified (unstaged)
-- Staged
+
+![status](images/status.png)
 
 ---
 
